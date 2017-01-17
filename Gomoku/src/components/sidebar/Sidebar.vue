@@ -27,8 +27,8 @@ export default {
     flex-direction: column;
     box-sizing: border-box;
     flex: 1 1 0%;
-    max-width: 16%;
-    flex-basis: 16%;
+    max-width: 16.6667%;
+    flex-basis: 16.6667%;
 }
 
 </style>

@@ -38,19 +38,28 @@ p {
   font-size: 1rem;
 }
 
+#app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
 .boxed {
   color: rgb(171, 178, 191);
   font-size: 14px;
   box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 5px 0px;
-  /*width: 100%;*/
-  /*overflow-x: auto;*/
   background-color: rgb(50, 50, 50);
   border-spacing: 0px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(65, 65, 65);
-  /*border-image: initial;*/
 }
 
 .px1 {
