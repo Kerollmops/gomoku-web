@@ -1,0 +1,27 @@
+{
+  "name": "gomoku-web",
+  "version": "0.1.0",
+  "description": "A web interface for the gomoku game.",
+  "main": "index.js",
+  "dependencies": {
+    "vue-cli": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kerollmops/gomoku-web.git"
+  },
+  "keywords": [
+    "gomoku",
+    "interface"
+  ],
+  "author": "Kerollmops",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kerollmops/gomoku-web/issues"
+  },
+  "homepage": "https://github.com/Kerollmops/gomoku-web#readme"
+}
