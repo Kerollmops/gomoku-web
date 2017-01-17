@@ -1,27 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <sidebar></sidebar>
+    <board></board>
   </div>
 </template>
 
 <script>
+import Sidebar from './components/sidebar/Sidebar.vue'
+import Board from './components/Board.vue'
+
 export default {
   name: 'app',
+  components: { Sidebar, Board },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -31,30 +21,41 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+html {
+  background-color: #272727;
 }
 
-h1, h2 {
-  font-weight: normal;
+body {
+  margin: 0;
+  font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.85;
+  color: rgb(51, 51, 51);
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+p {
+  font-size: 1rem;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+.boxed {
+  color: rgb(171, 178, 191);
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 5px 0px;
+  /*width: 100%;*/
+  /*overflow-x: auto;*/
+  background-color: rgb(50, 50, 50);
+  border-spacing: 0px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(65, 65, 65);
+  /*border-image: initial;*/
 }
 
-a {
-  color: #42b983;
+.px1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
 </style>
