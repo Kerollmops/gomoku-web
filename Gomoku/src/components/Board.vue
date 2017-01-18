@@ -18,7 +18,8 @@ export default {
 <style lang="css" scoped>
 
 .board {
-    background: grey;
+    /*TODO: remove color*/
+    color: rgb(171, 178, 191);
     flex-direction: column;
     box-sizing: border-box;
     flex: 1 1 0%;

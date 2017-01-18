@@ -10,8 +10,9 @@ var n = 0;
 export default {
   name: 'Event',
   data () {
+    n += 1;
     return {
-      id: ++n,
+      id: n,
       msg: "This is an event number"
     };
   }
