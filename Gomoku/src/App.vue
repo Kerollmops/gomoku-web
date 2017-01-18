@@ -22,6 +22,10 @@ export default {
 
 <style>
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 html {
   background-color: #272727;
 }
@@ -40,7 +44,6 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -49,20 +52,36 @@ p {
 }
 
 .boxed {
-  color: rgb(171, 178, 191);
+  color: #abb2bf;
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0, 0.498039) 0px 2px 5px 0px;
-  background-color: rgb(50, 50, 50);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  background-color: #323232;
   border-spacing: 0px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(65, 65, 65);
+  border-color: #414141;
 }
 
 .px1 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.green {
+  color: #98c379;
+}
+
+.orange {
+  color: #e06c75;
+}
+
+.yellow {
+  color: #e5c07b;
+}
+
+.blue {
+  color: #61afef;
 }
 
 </style>

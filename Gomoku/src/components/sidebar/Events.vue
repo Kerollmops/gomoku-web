@@ -1,10 +1,7 @@
 <template>
     <div class="events">
         <ul>
-          <!--mode="out-in"-->
-          <transition-group name="fade" >
-            <event v-for="i in numberOfEvents" v-show="isInChunk(i)" :key="i"></event>
-          </transition-group>
+          <event v-for="i in numberOfEvents"></event>
         </ul>
         <div class="controls">
           <button class="boxed" :disabled="isFirstChunk()" @click="decrementChunk">
@@ -34,14 +31,16 @@ export default {
   components: { Event },
   data () {
     return {
-      events: [Event, Event, Event, Event, Event, Event, Event],
+      events: [Event, Event, Event, Event, Event, Event, Event, Event, Event,
+               Event, Event, Event, Event, Event, Event, Event, Event, Event,
+               Event, Event, Event],
       chunkSize: 5,
       chunk: 0
     };
   },
   methods: {
     numberOfChunks() {
-      return this.events.length % this.chunkSize
+      return Math.ceil(this.events.length / this.chunkSize)
     },
     isFirstChunk() {
       return this.chunk == 0
@@ -58,12 +57,6 @@ export default {
       if (!this.isFirstChunk()) {
         this.chunk -= 1
       }
-    },
-    // TODO: move this to Event.vue
-    isInChunk(index) {
-      var start = this.chunk * this.chunkSize;
-      var stop = start + this.chunkSize;
-      return index >= start && index < stop
     }
   },
   computed: {
@@ -105,31 +98,6 @@ export default {
   margin: 0 auto;
   text-align: center;
   margin-top: 10px;
-}
-
-/*TODO: remove*/
-.fade-enter-active, .fade-leave-active {
-  transition: max-height 5s, opacity 5s;
-}
-
-.fade-enter {
-  max-height: 0;
-  opacity: 0;
-}
-
-.fade-enter-to {
-  max-height: 100px;
-  opacity: 1;
-}
-
-.fade-leave {
-  max-height: 100px;
-  opacity: 1;
-}
-
-.fade-leave-to {
-  opacity: 0;
-  max-height: 0;
 }
 
 </style>
