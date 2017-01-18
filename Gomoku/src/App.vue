@@ -30,8 +30,6 @@ body {
   margin: 0;
   font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.85;
-  color: rgb(51, 51, 51);
 }
 
 p {

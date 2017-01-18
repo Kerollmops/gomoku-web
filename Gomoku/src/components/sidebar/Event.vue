@@ -1,15 +1,18 @@
 <template>
-    <li class="event boxed px1">
-        <p>{{ msg }}</p>
+    <li class="event boxed">
+        <p>{{ msg + " " + id }}</p>
     </li>
 </template>
 
 <script>
+var n = 0;
+
 export default {
   name: 'Event',
   data () {
     return {
-      msg: "This is an event"
+      id: ++n,
+      msg: "This is an event number"
     };
   }
 };
@@ -18,7 +21,9 @@ export default {
 <style lang="css" scoped>
 
 .event {
-  /**/
+  margin-bottom: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 </style>

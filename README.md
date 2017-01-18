@@ -11,10 +11,10 @@ npm install
 # Usage
 ## for debug mode
 ```bash
-npm run
+npm run dev
 ```
 
 ## for release mode
 ```bash
-npm run dev
+npm run
 ```

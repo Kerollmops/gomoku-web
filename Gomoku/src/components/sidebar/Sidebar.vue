@@ -23,7 +23,6 @@ export default {
 <style lang="css" scoped>
 
 .sidebar {
-    /*background: #ccc;*/
     flex-direction: column;
     box-sizing: border-box;
     flex: 1 1 0%;
