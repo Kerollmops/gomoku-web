@@ -32,9 +32,8 @@ export default {
   },
   computed: {
     isInChunk() {
-      var start = this.$parent.chunk * this.$parent.chunkSize;
-      var stop = start + this.$parent.chunkSize;
-      return this.id >= start && this.id < stop;
+      var start = this.$parent.chunkStart;
+      return this.id >= start && this.id < start + this.$parent.chunkSize
     }
   }
 };

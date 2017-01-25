@@ -1,5 +1,6 @@
 <template>
     <div class="events">
+        <!--TODO: div of <ul> better position absolute system-->
         <ul>
           <event v-for="i in numberOfEvents"></event>
         </ul>
@@ -25,37 +26,34 @@
 
 <script>
 import Event from './Event.vue'
+import events_store from '../../EventsStore'
 
 export default {
   name: 'Events',
   components: { Event },
   data () {
     return {
-      events: [Event, Event, Event, Event, Event, Event, Event, Event, Event,
-               Event, Event, Event, Event, Event, Event, Event, Event, Event,
-               Event, Event, Event],
+      events: [],
       chunkSize: 5,
-      chunk: 0
+      chunkStart: 0
     };
   },
   methods: {
-    numberOfChunks() {
-      return Math.ceil(this.events.length / this.chunkSize)
-    },
     isFirstChunk() {
-      return this.chunk == 0
+      return this.events.length == 0 || this.chunkStart == 0
     },
     isLastChunk() {
-      return this.chunk == this.numberOfChunks() - 1
+      return this.events.length == 0
+             || this.chunkStart + this.chunkSize >= this.events.length - 1
     },
     incrementChunk() {
       if (!this.isLastChunk()) {
-        this.chunk += 1
+        this.chunkStart += 1
       }
     },
     decrementChunk() {
       if (!this.isFirstChunk()) {
-        this.chunk -= 1
+        this.chunkStart -= 1
       }
     }
   },
